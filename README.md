@@ -86,21 +86,7 @@ To upload manually:
 3. Upload `salaries.csv`.
 4. Make sure the file name remains exactly `salaries.csv`.
 
-### 4. Run the Installation Cells
-
-Before running the full notebook, run the installation cells first.
-
-The project uses several additional libraries:
-
-`!pip install ydata-profiling`
-
-`!pip install xgboost lightgbm catboost`
-
-`!pip install tqdm`
-
-These libraries are needed for automated profiling, machine learning models, CatBoost training, and progress bars.
-
-### 5. Run the Notebook Cells From Top to Bottom
+### 4. Run the Notebook Cells From Top to Bottom
 
 After the dataset and required libraries are ready, run all notebook cells in order.
 
@@ -118,7 +104,7 @@ The notebook workflow follows this sequence:
 10. Final tuned CatBoost evaluation
 11. Before-and-after tuning comparison
 
-### 6. Runtime Note for Hyperparameter Tuning
+### 7. Runtime Note for Hyperparameter Tuning
 
 The hyperparameter tuning section may take a long time because CatBoost is trained many times using 7-fold cross-validation.
 
@@ -135,7 +121,7 @@ GridSearchCV was used for focused hyperparameter tuning. It tested every possibl
 
 To save time, users may skip the full tuning cells and run the final tuned CatBoost evaluation section directly because the best hyperparameters are already included in the notebook.
 
-### 7. Check the Final Output
+### 8. Check the Final Output
 
 The final output shows the model performance before and after tuning.
 
