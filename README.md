@@ -24,3 +24,111 @@ The model learns from historical salary records and predicts the salary value ba
 
 ```python
 salary_in_usd
+
+Okay good — since your GitHub already has **multiple milestone notebooks + `FullPipeline.ipynb` + `salaries.csv`**, your README should explain **which file to run** and **what each file is for**.
+
+Use this structure in your README:
+
+````markdown
+## How to Run the Codebase in Google Colab
+
+1. Open the GitHub repository.
+
+2. To run the complete project, open:
+
+   `FullPipeline.ipynb`
+
+   This notebook contains the full machine learning workflow from dataset loading until final model evaluation.
+
+3. Open the notebook in Google Colab.
+
+   In GitHub, click `FullPipeline.ipynb`, then click **Open in Colab** if the button is available.  
+   If not, go to Google Colab → File → Open notebook → GitHub → paste the repository link.
+
+4. Make sure the dataset file is available.
+
+   The dataset file is already included in the repository as:
+
+   `salaries.csv`
+
+   The notebook loads the dataset using:
+
+   ```python
+   df = pd.read_csv('/content/salaries.csv')
+````
+
+If running directly in Colab, upload `salaries.csv` into the Colab file panel.
+
+5. Run the installation cells first.
+
+   The notebook uses additional libraries such as:
+
+   ```python
+   !pip install ydata-profiling
+   !pip install xgboost lightgbm catboost
+   !pip install tqdm
+   ```
+
+6. Run the notebook cells from top to bottom.
+
+   The workflow follows this order:
+
+   ```text
+   1. Initial dataset exploration
+   2. Data cleaning
+   3. Exploratory Data Analysis
+   4. Feature preprocessing and encoding
+   5. Train-test split
+   6. Model training
+   7. 7-fold cross-validation
+   8. Model comparison
+   9. CatBoost hyperparameter tuning
+   10. Final tuned CatBoost evaluation
+   11. Before-and-after tuning comparison
+   ```
+
+7. Runtime note:
+
+   The hyperparameter tuning section may take a long time:
+
+   * RandomizedSearchCV: approximately 2 hours
+   * GridSearchCV: approximately 7 hours
+
+   To save time, users may skip the full tuning cells and run the final tuned CatBoost evaluation section because the best hyperparameters are already included.
+
+## Notebook File Guide
+
+| File                                 | Purpose                                                              |
+| ------------------------------------ | -------------------------------------------------------------------- |
+| `FullPipeline.ipynb`                 | Complete project pipeline from data loading to final evaluation      |
+| `Milestone1_DataPipeline.ipynb`      | Dataset loading, cleaning, and preprocessing                         |
+| `Milestone2_ArchitectureLogic.ipynb` | Pipeline logic, feature handling, and model architecture explanation |
+| `Milestone3_TrainingLoop.ipynb`      | Model training and cross-validation                                  |
+| `Milestone4_ModelOptimization.ipynb` | Hyperparameter tuning using RandomizedSearchCV and GridSearchCV      |
+| `Milestone5_FinalEvaluation.ipynb`   | Final tuned model testing and evaluation results                     |
+| `salaries.csv`                       | Dataset used for training and evaluation                             |
+| `README.md`                          | Project explanation and running instructions                         |
+
+## Requirements
+
+This project is designed to run in Google Colab.
+
+Required libraries:
+
+```text
+pandas
+numpy
+matplotlib
+seaborn
+scikit-learn
+xgboost
+lightgbm
+catboost
+tqdm
+ydata-profiling
+```
+
+```
+
+This is much better than only explaining the dataset, because it directly answers **“how to run your codebase in Google Colab.”**
+```
