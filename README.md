@@ -8,6 +8,8 @@ This dataset contains real-world salary data for jobs in Data Science, Artificia
 
 The target variable used in this project is `salary_in_usd`, which represents the annual salary converted into USD for standardized comparison. The dataset is suitable for regression-based machine learning because the goal is to predict a continuous numerical value, which is job salary.
 
+Shamim, A. (2025). Data Science, AI & ML Job Salaries in 2025. Kaggle.Com. https://www.kaggle.com/datasets/adilshamim8/salaries-for-data-science-jobs
+
 ## Project Objective
 
 The objective of this project is to develop and evaluate machine learning regression models to predict job salaries in the Data Science, Artificial Intelligence, and Machine Learning fields.
